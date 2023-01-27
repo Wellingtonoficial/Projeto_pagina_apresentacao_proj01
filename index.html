@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 01</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;600;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+        <!--Desfoca o fundo ao abrir o menu mobile-->
+        <div class="desfoque"></div>
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="imgs/logo.svg" alt="">
+                </div>
+                <input id="menucheckd" type="checkbox">
+                <div class="menuHamburguer">
+                    <label for="menucheckd"><img class="imgMenu" src="imgs/icon-menu.svg" alt=""></label>
+                </div>
+                <div class="menu">
+                    <!-- Menu principal com dropdwon -->
+                    <ul class="subMenu01">
+                        <li class="Drop01"><a href="#">Features</a>
+                            <img class="arrowDrop01" src="imgs/icon-arrow-up.svg" alt="">
+                            <ul class="subMenuDrop01">
+                                <li>
+                                    <img src="imgs/icon-todo.svg" alt="">
+                                    <a href="#">Todo List</a></li>
+                                <li>
+                                    <img src="imgs/icon-calendar.svg" alt="">
+                                    <a href="#">Calendar</a></li>
+                                <li>
+                                    <img src="imgs/icon-reminders.svg" alt="">
+                                    <a href="#">Reminders</a></li>
+                                <li>
+                                    <img src="imgs/icon-planning.svg" alt="">
+                                    <a href="#">Planning</a></li>
+                            </ul>
+                        </li>
+                        <li class="Drop02"><a href="#">Company</a>
+                            <img class="arrowDrop02" src="imgs/icon-arrow-up.svg" alt="">
+                            <ul class="subMenuDrop02">
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                    <!-- Menu login -->
+                    <ul class="subMenu02">
+                        <li><a href="#">Login</a></li>
+                        <li><a class="btnRegistre" href="#">Register</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+
+        <main>
+            <section class="row">
+                <!-- coluna contendo informações -->
+                <div class="col1">
+                    <div class="apresentacao">
+                        <div class="titulo">
+                            <h1><span>Make</span> remote work</h1>
+                        </div>
+                        <div class="texto">
+                            <p>Get your team in sync, no matter your location. Streamline precesses, create team rituals, and watch productivity soar.</p>
+                        </div>
+                        <div class="botao">
+                            <a href="#"> Learn more</a>
+                        </div>
+                    </div>
+
+                    <div class="marcas">
+                        <div>
+                            <img src="imgs/client-databiz.svg" alt="">
+                            <img src="imgs/client-audiophile.svg" alt="">
+                            <img src="imgs/client-meet.svg" alt="">
+                            <img src="imgs/client-maker.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Coluna onde contem a imagem principal -->
+                <div class="col2">
+                    <div class="img">
+                        <picture>
+                            <!-- Troca de imagem de acordo com a largura da tela -->
+                            <source srcset="imgs/image-hero-mobile.png" media="(max-width: 767.98px)">
+                            <source srcset="imgs/image-hero-desktop.png" media="(min-width: 767.99px)">
+                            <img class="imgDesck" src="imgs/image-hero-desktop.png" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    position: relative;
+    width: 100%;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+    background: hsl(0, 0%, 98%);
+}
+a{ color: rgb(28, 28, 28); text-decoration: none;}
+li{list-style: none;}
+.desfoque{
+    position: fixed;
+    width:  100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.484);
+    display: none;
+    z-index: 997;
+}
+
+
+header{
+    width: 100%;
+    font-size: 14px;
+    height: 80px;
+    position: relative;
+}
+header nav{
+    margin: 0 auto;
+    max-width: 1350px;
+    width: 90%;
+    height: 100%;
+    display: flex;
+}
+
+/* Menu hamburguer */
+.menuHamburguer{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: none;
+}
+.menuHamburguer label{
+    cursor: pointer;
+}
+#menucheckd{
+    display: none;
+}
+
+/* Logo do site */
+header nav .logo{
+    max-width: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Menu */
+header nav .menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Menu principal com dropdwon */
+.subMenu01{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+.subMenu01 li a{
+    text-decoration: none;
+}
+.subMenu01 li a:hover{
+    color: rgb(155, 155, 155);
+}
+/*----------------------------*/
+.Drop01{
+    position: relative;
+    cursor: pointer;
+}
+.subMenuDrop01{
+    position: absolute;
+    padding: 8px 20px;
+    top: 20px;
+    right: 0;
+    background: white;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: none;
+}
+.subMenuDrop01 li{
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+.subMenuDrop01 li a:hover{
+    color: rgb(155, 155, 155);
+}
+.subMenuDrop01.active{
+    display: block;
+}
+/*----------------------------*/
+.Drop02{
+    position: relative;
+    cursor: pointer;
+}
+.subMenuDrop02{
+    min-width: 105px;
+    position: absolute;
+    padding: 8px 20px;
+    top: 20px;
+    left: 0;
+    background: white;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    display: none;
+}
+.subMenuDrop02 li{
+    margin: 10px 0;
+}
+.subMenuDrop02 li a:hover{
+    color: rgb(155, 155, 155);
+}
+.subMenuDrop02.active{
+    display: block;
+}
+
+/* Menu login */
+.subMenu02{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+.subMenu02 li a{
+    text-decoration: none;
+}
+.subMenu02 .btnRegistre{
+    border: solid 2px rgb(28, 28, 28);
+    padding: 7px 15px;
+    border-radius: 10px;
+}
+
+
+/* Corpo principal */
+main{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1250px;
+}
+main .row{
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+}
+
+/* coluna 1 contendo informações */
+main .row .col1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main .row .col1 .apresentacao{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+main .row .col1 .apresentacao .titulo  h1{
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: rgb(27, 27, 27);
+}
+main .row .col1 .apresentacao .titulo  h1 span{
+    margin-right: 200px;
+}
+main .row .col1 .apresentacao p{
+    width: 100%;
+    max-width: 400px;
+    text-align: justify;
+    font-size: 17px;
+    line-height: 23px;
+    color: rgb(109, 109, 109);
+    font-weight: 500;
+}
+main .row .col1 .apresentacao a{
+    background: rgb(27, 27, 27);
+    color: hsl(0, 0%, 98%);
+    text-decoration: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: .3s ease-out;
+}
+main .row .col1 .apresentacao a:hover{
+    border: solid 1px rgb(27, 27, 27);
+    background: none;
+    color: rgb(27, 27, 27);
+}
+main .row .col1 .marcas{
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+}
+main .row .col1 .marcas div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/* Coluna onde contem a imagem principal */
+main .row .col2 .img{
+    display: flex;
+    justify-content: flex-end;
+}
+main .row .col2 .img img{
+    max-width: 400px;
+}
+
+
+
+
+/* RESPONSIVIDADE DO SITE */
+@media (max-width: 767.98px) {
+    
+    header nav{
+        width: 95%;
+    }
+    header nav .menu.ativado{ /*quando conter a classe 'ativado'*/
+        right: 0;
+    }
+    header nav .menu{
+        display: block;
+        background: rgb(255, 255, 255);
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        position: fixed;
+        padding: 10px;
+        transition: .3s ease;
+        z-index: 998;
+    }
+    /* Menu principal com dropdwon */
+    header nav .menu .subMenu01{
+        display: block;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        margin-left: 20px;
+    }
+    header nav .menu .subMenu01 li{
+        margin-bottom: 16px;
+    }
+    .subMenuDrop01{
+        position: static;
+        box-shadow: none;
+        background: none;
+    }
+
+    /* Menu login */
+    header nav .menu .subMenu02{
+        flex-direction: column;
+    }
+    .subMenuDrop02{
+        position: static;
+        box-shadow: none;
+        background: none;
+    }
+
+    /* Menu hamburguer */
+    .menuHamburguer{
+        display: block;
+        z-index: 999;
+        right: 15px;
+    }
+    #menucheckd:checked + .menuHamburguer{
+        position: fixed;
+    }
+    
+    /* Corpo geral */
+    main{
+        width: 95%;
+        padding: 20px 0;
+    }
+    main .row{
+        grid-template-columns:  1fr;
+        margin: 10px 0;
+    }
+    /* coluna 1 contendo informações */
+    main .row .col1{
+        order: 2;
+    }
+    main .row .col1 .apresentacao{
+        margin: 30px 0 60px 0;
+    }
+    main .row .col1 .apresentacao div{
+        text-align: center;
+        margin-top: 15px;
+    }
+    main .row .col1 .apresentacao h1{
+        font-size: 2rem !important;
+    }
+    main .row .col1 .apresentacao .titulo  h1 span{
+        margin-right: 0;
+    }
+    main .row .col1 .apresentacao p{
+        margin: 0 auto;
+        text-align: center;
+    }
+    main .row .col1 .apresentacao .botao{
+        margin-top: 30px;
+    }
+    main .row .col1 .marcas img{
+        width: 60px;
+    }
+
+
+    /* Coluna 2 onde contem a imagem principa */
+    main .row .col2{
+        order: 1;
+    }
+    main .row .col2 .img picture{
+        width: 100%;
+    }
+    main .row .col2 .img img{
+        min-width: 100%;
+        width: 100%;
+        object-fit: cover !important;
+    }
+
+}
